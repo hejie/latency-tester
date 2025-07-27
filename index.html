@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SNI 握手延迟测试命令生成器</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>SNI 延迟测试命令生成器</title>
     <style>
         :root {
             --primary-color: #007bff;
@@ -167,61 +166,61 @@
     </div>
 
     <script>
-        // 你的 JavaScript 代码放在这里
-        [cite_start]const domains = ["amd.com", "aws.com", "c.6sc.co", "j.6sc.co", "b.6sc.co", "intel.com", "s.yimg.com", "r.bing.com", "th.bing.com", "www.amd.com", "www.aws.com", "ipv6.6sc.co", "www.xbox.com", "www.sony.com", "rum.hlx.page", "www.bing.com", "xp.apple.com", "www.wowt.com", "www.apple.com", "www.intel.com", "www.tesla.com", "www.xilinx.com", "www.oracle.com", "www.icloud.com", "apps.apple.com", "c.marsflag.com", "www.nvidia.com", "snap.licdn.com", "aws.amazon.com", "drivers.amd.com", "cdn.bizibly.com", "s.go-mpulse.net", "tags.tiqcdn.com", "cdn.bizible.com", "ocsp2.apple.com", "cdn.userway.org", "download.amd.com", "d1.awsstatic.com", "s0.awsstatic.com", "mscom.demdex.net", "a0.awsstatic.com", "go.microsoft.com", "apps.mzstatic.com", "sisu.xboxlive.com", "www.microsoft.com", "s.mp.marsflag.com", "images.nvidia.com", "vs.aws.amazon.com", "c.s-microsoft.com", "statici.icloud.com", "beacon.gtv-pub.com", "ts4.tc.mm.bing.net", "ts3.tc.mm.bing.net", "d2c.aws.amazon.com", "ts1.tc.mm.bing.net", "ce.mf.marsflag.com", "d0.m.awsstatic.com", "t0.m.awsstatic.com", "polyfill-fastly.io", "ts2.tc.mm.bing.net", "tag.demandbase.com", "assets-www.xbox.com", "logx.optimizely.com", "azure.microsoft.com", "aadcdn.msftauth.net", "d.oracleinfinity.io", "assets.adobedtm.com", "lpcdn.lpsnmedia.net", "res-1.cdn.office.net", "is1-ssl.mzstatic.com", "electronics.sony.com", "intelcorp.scene7.com", "acctcdn.msftauth.net", "cdnssl.clicktale.net", "catalog.gamepass.com", "www.redditstatic.com", "consent.trustarc.com", "gsp-ssl.ls.apple.com", "munchkin.marketo.net", "s.company-target.com", "cdn77.api.userway.org", "cua-chat-ui.tesla.com", "assets-xbxweb.xbox.com", "ds-aksb-a.akamaihd.net", "static.cloud.coveo.com", "api.company-target.com", "devblogs.microsoft.com", "s7mbrstream.scene7.com", "fpinit.itunes.apple.com", "digitalassets.tesla.com", "www.googletagmanager.com", "d.impactradius-event.com", "downloadmirror.intel.com", "iosapps.itunes.apple.com", "www.google-analytics.com", "se-edge.itunes.apple.com", "publisher.liveperson.net", "www.googleadservices.com", "tag-logger.demandbase.com", "services.digitaleast.mobi", "configuration.ls.apple.com", "gray-wowt-prod.gtv-cdn.com", "visualstudio.microsoft.com", "prod.log.shortbread.aws.dev", "amp-api-edge.apps.apple.com", "store-images.s-microsoft.com", "cdn-dynmedia-1.microsoft.com", "github.gallerycdn.vsassets.io", "prod.pa.cdn.uis.awsstatic.com", "a.b.cdn.console.awsstatic.com", "d3agakyjgjv5i8.cloudfront.net", "vscjava.gallerycdn.vsassets.io", "location-services-prd.tesla.com", "ms-vscode.gallerycdn.vsassets.io", "ms-python.gallerycdn.vsassets.io", "gray-config-prod.api.arc-cdn.net", "i7158c100-ds-aksb-a.akamaihd.net", "downloaddispatch.itunes.apple.com", "res.public.onecdn.static.microsoft", "gray.video-player.arcpublishing.com", "gray-config-prod.api.cdn.arcpublishing.com", "img-prod-cms-rt-microsoft-com.akamaized.net", "prod.us-east-1.ui.gcr-chat.marketing.aws.dev"]; [cite: 1, 2]
+        // 使用纯 JavaScript，不再依赖 jQuery
+        const domains = ["amd.com", "aws.com", "c.6sc.co", "j.6sc.co", "b.6sc.co", "intel.com", "s.yimg.com", "r.bing.com", "th.bing.com", "www.amd.com", "www.aws.com", "ipv6.6sc.co", "www.xbox.com", "www.sony.com", "rum.hlx.page", "www.bing.com", "xp.apple.com", "www.wowt.com", "www.apple.com", "www.intel.com", "www.tesla.com", "www.xilinx.com", "www.oracle.com", "www.icloud.com", "apps.apple.com", "c.marsflag.com", "www.nvidia.com", "snap.licdn.com", "aws.amazon.com", "drivers.amd.com", "cdn.bizibly.com", "s.go-mpulse.net", "tags.tiqcdn.com", "cdn.bizible.com", "ocsp2.apple.com", "cdn.userway.org", "download.amd.com", "d1.awsstatic.com", "s0.awsstatic.com", "mscom.demdex.net", "a0.awsstatic.com", "go.microsoft.com", "apps.mzstatic.com", "sisu.xboxlive.com", "www.microsoft.com", "s.mp.marsflag.com", "images.nvidia.com", "vs.aws.amazon.com", "c.s-microsoft.com", "statici.icloud.com", "beacon.gtv-pub.com", "ts4.tc.mm.bing.net", "ts3.tc.mm.bing.net", "d2c.aws.amazon.com", "ts1.tc.mm.bing.net", "ce.mf.marsflag.com", "d0.m.awsstatic.com", "t0.m.awsstatic.com", "polyfill-fastly.io", "ts2.tc.mm.bing.net", "tag.demandbase.com", "assets-www.xbox.com", "logx.optimizely.com", "azure.microsoft.com", "aadcdn.msftauth.net", "d.oracleinfinity.io", "assets.adobedtm.com", "lpcdn.lpsnmedia.net", "res-1.cdn.office.net", "is1-ssl.mzstatic.com", "electronics.sony.com", "intelcorp.scene7.com", "acctcdn.msftauth.net", "cdnssl.clicktale.net", "catalog.gamepass.com", "www.redditstatic.com", "consent.trustarc.com", "gsp-ssl.ls.apple.com", "munchkin.marketo.net", "s.company-target.com", "cdn77.api.userway.org", "cua-chat-ui.tesla.com", "assets-xbxweb.xbox.com", "ds-aksb-a.akamaihd.net", "static.cloud.coveo.com", "api.company-target.com", "devblogs.microsoft.com", "s7mbrstream.scene7.com", "fpinit.itunes.apple.com", "digitalassets.tesla.com", "www.googletagmanager.com", "d.impactradius-event.com", "downloadmirror.intel.com", "iosapps.itunes.apple.com", "www.google-analytics.com", "se-edge.itunes.apple.com", "publisher.liveperson.net", "www.googleadservices.com", "tag-logger.demandbase.com", "services.digitaleast.mobi", "configuration.ls.apple.com", "gray-wowt-prod.gtv-cdn.com", "visualstudio.microsoft.com", "prod.log.shortbread.aws.dev", "amp-api-edge.apps.apple.com", "store-images.s-microsoft.com", "cdn-dynmedia-1.microsoft.com", "github.gallerycdn.vsassets.io", "prod.pa.cdn.uis.awsstatic.com", "a.b.cdn.console.awsstatic.com", "d3agakyjgjv5i8.cloudfront.net", "vscjava.gallerycdn.vsassets.io", "location-services-prd.tesla.com", "ms-vscode.gallerycdn.vsassets.io", "ms-python.gallerycdn.vsassets.io", "gray-config-prod.api.arc-cdn.net", "i7158c100-ds-aksb-a.akamaihd.net", "downloaddispatch.itunes.apple.com", "res.public.onecdn.static.microsoft", "gray.video-player.arcpublishing.com", "gray-config-prod.api.cdn.arcpublishing.com", "img-prod-cms-rt-microsoft-com.akamaized.net", "prod.us-east-1.ui.gcr-chat.marketing.aws.dev"];
 
-        [cite_start]// 从数组中随机获取指定数量的元素 [cite: 3]
         function getRandomDomains(array, count) {
             const shuffled = [...array].sort(() => 0.5 - Math.random());
-            [cite_start]return shuffled.slice(0, count); [cite: 3]
+            return shuffled.slice(0, count);
         }
 
-        [cite_start]// 生成Shell命令 [cite: 4]
         function generateShellCommand(selectedDomains) {
-            [cite_start]const domainStr = selectedDomains.join(" "); [cite: 4]
-            [cite_start]return `for d in ${domainStr} ; do t1=$(date +%s%3N); timeout 1 openssl s_client -connect $d:443 -servername $d </dev/null &>/dev/null && t2=$(date +%s%3N) && echo "$d: $((t2 - t1)) ms" || echo "$d: timeout"; done`; [cite: 4, 5, 6]
+            const domainStr = selectedDomains.join(" ");
+            return `for d in ${domainStr} ; do t1=$(date +%s%3N); timeout 1 openssl s_client -connect $d:443 -servername $d </dev/null &>/dev/null && t2=$(date +%s%3N) && echo "$d: $((t2 - t1)) ms" || echo "$d: timeout"; done`;
         }
 
-        [cite_start]// 更新文本框中的命令 [cite: 7]
         function updateCommand() {
-            [cite_start]const selected = getRandomDomains(domains, 10); [cite: 7]
-            [cite_start]const command = generateShellCommand(selected); [cite: 7]
-            [cite_start]$("#commandBox").val(command); [cite: 7]
+            const selected = getRandomDomains(domains, 10);
+            const command = generateShellCommand(selected);
+            document.getElementById('commandBox').value = command;
         }
 
-        [cite_start]// 复制命令到剪贴板 [cite: 8]
         function copyToClipboard() {
-            const textArea = document.getElementById("commandBox");
+            const textArea = document.getElementById('commandBox');
             textArea.select();
-            textArea.setSelectionRange(0, 99999); // 兼容移动设备
+            textArea.setSelectionRange(0, 99999);
             try {
-                // 推荐使用 navigator.clipboard API (更现代、安全)
-                navigator.clipboard.writeText(textArea.value).then(function() {
+                navigator.clipboard.writeText(textArea.value).then(() => {
                     alert("命令已复制到剪贴板!");
-                }, function(err) {
-                    // 如果失败，回退到旧方法
-                    [cite_start]document.execCommand("copy"); [cite: 8]
-                    alert("命令已复制到剪贴板!");
+                }).catch(() => {
+                    document.execCommand("copy");
+                    alert("命令已复制到剪贴板 (fallback)!");
                 });
             } catch (err) {
-                // 兼容不支持 clipboard API 的旧浏览器
-                [cite_start]document.execCommand("copy"); [cite: 8]
-                alert("命令已复制到剪贴板!");
+                document.execCommand("copy");
+                alert("命令已复制到剪贴板 (legacy)!");
             }
         }
-        
-        [cite_start]// 文档加载完毕后执行 [cite: 8]
-        $(document).ready(function () {
+
+        // 等待DOM内容完全加载后再执行脚本
+        document.addEventListener('DOMContentLoaded', function() {
+            const refreshBtn = document.getElementById('refreshBtn');
+            const copyBtn = document.getElementById('copyBtn');
+            const refreshIcon = refreshBtn.querySelector('svg');
+
             updateCommand(); // 页面加载时立即生成第一条命令
 
-            $("#refreshBtn").on("click", function() {
-                $(this).find('svg').css('transition', 'transform 0.5s ease');
-                $(this).find('svg').css('transform', 'rotate(360deg)');
-                setTimeout(() => $(this).find('svg').css('transform', 'rotate(0deg)'), 500);
+            refreshBtn.addEventListener('click', function() {
+                refreshIcon.style.transition = 'transform 0.5s ease';
+                refreshIcon.style.transform = 'rotate(360deg)';
+                setTimeout(() => {
+                    refreshIcon.style.transition = 'none';
+                    refreshIcon.style.transform = 'rotate(0deg)';
+                }, 500);
                 updateCommand();
             });
 
-            [cite_start]$("#copyBtn").on("click", copyToClipboard); [cite: 8]
+            copyBtn.addEventListener('click', copyToClipboard);
         });
     </script>
 </body>
